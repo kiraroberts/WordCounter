@@ -21,5 +21,14 @@ namespace Counter.Tests
                string testWord = newWordCounter.InputtedWord;
                Assert.AreEqual("molasses", testWord);
         }
+
+        [TestMethod]
+        public void InputtedSentence_InputtedSentenceToLower_true()
+        {
+            WordCounter newWordCounter = new WordCounter("His voice sounded like someone forgot to grease the wagon.", "grease");
+            string lowerInputtedSentence = newWordCounter.InputtedSentence;
+            Assert.AreEqual("his voice sounded like somone forgot to grease the wagon.", lowerInputtedSentence);
+
+        }
     }
 }
