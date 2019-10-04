@@ -14,7 +14,7 @@ namespace Counter.Models
         {
             InputtedSentence = inputtedSentence.ToLower();
             InputtedSentenceArray = InputtedSentenceArray;
-            InputtedWord = inputtedWord;
+            InputtedWord = inputtedWord.ToLower();
             NumberOfTimesWordUsed = NumberOfTimesWordUsed;
 
         }
