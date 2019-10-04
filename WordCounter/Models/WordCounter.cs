@@ -13,7 +13,7 @@ namespace Counter.Models
         public WordCounter(string inputtedSentence, string inputtedWord)
         {
             InputtedSentence = inputtedSentence.ToLower();
-            InputtedSentenceArray = InputtedSentenceArray;
+            InputtedSentenceArray = InputtedSentence.Split(' ', '.', '!', ',', '?');
             InputtedWord = inputtedWord.ToLower();
             NumberOfTimesWordUsed = NumberOfTimesWordUsed;
 
