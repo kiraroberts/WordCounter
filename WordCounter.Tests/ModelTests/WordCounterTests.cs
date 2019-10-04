@@ -37,5 +37,12 @@ namespace Counter.Tests
             string lowerInputtedWord = newWordCounter.InputtedWord;
             Assert.AreEqual("guts", lowerInputtedWord);
         }
+        [TestMethod]
+        public void InputtedSentenceArray_InputtedSentenceArrayIsArray_true()
+        {
+            WordCounter newWordCounter = new WordCounter("He had been in the desert so long, he knew all the lizards by their first names.", "lizards");
+            string[] testArray = newWordCounter.InputtedSentenceArray;
+            Assert.AreEqual("desert", testArray[5]);
+        }
     }
 }
