@@ -11,8 +11,15 @@ namespace Counter.Tests
         [TestMethod]
         public void WordCounter_ClassIsCreated_true()
         {
-            WordCounter newWordCounter = new WordCounter("pleased", "He is as pleased as a dog with two tails.");
+            WordCounter newWordCounter = new WordCounter("He is as pleased as a dog with two tails.", "pleased");
             Assert.AreEqual(typeof(WordCounter), newWordCounter.GetType());
+        }
+        [TestMethod]
+        public void InputtedSentence_StoredInputtedSentence_String()
+        {
+            WordCounter newWordCounter = new WordCounter("He is as slow as molasses in January.", "molasses");
+               string testWord = newWordCounter.InputtedWord;
+               Assert.AreEqual("molasses", testWord);
         }
     }
 }
