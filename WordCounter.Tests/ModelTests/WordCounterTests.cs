@@ -30,5 +30,12 @@ namespace Counter.Tests
             Assert.AreEqual("his voice sounded like someone forgot to grease the wagon.", lowerInputtedSentence);
 
         }
+        [TestMethod]
+        public void InputtedWord_InputtedWordToLower_true()
+        {
+            WordCounter newWordCounter = new WordCounter("He didn’t have manners enough to carry guts to a bear.", "GUTS");
+            string lowerInputtedWord = newWordCounter.InputtedWord;
+            Assert.AreEqual("guts", lowerInputtedWord);
+        }
     }
 }
