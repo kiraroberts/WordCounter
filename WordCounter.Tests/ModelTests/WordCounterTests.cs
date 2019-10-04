@@ -27,7 +27,7 @@ namespace Counter.Tests
         {
             WordCounter newWordCounter = new WordCounter("His voice sounded like someone forgot to grease the wagon.", "grease");
             string lowerInputtedSentence = newWordCounter.InputtedSentence;
-            Assert.AreEqual("his voice sounded like somone forgot to grease the wagon.", lowerInputtedSentence);
+            Assert.AreEqual("his voice sounded like someone forgot to grease the wagon.", lowerInputtedSentence);
 
         }
     }
