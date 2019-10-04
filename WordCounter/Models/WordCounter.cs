@@ -19,7 +19,15 @@ namespace Counter.Models
         }
         public int NumberOfWordUsed(string[] inputtedSentenceArray, string inputtedWord)
         {
-            return 0;
+            int number = 0;
+            for(int index = 0; index < InputtedSentenceArray.Length; index++)
+            {
+                if (inputtedWord == InputtedSentenceArray[index])
+                {
+                    number += 1;
+                }
+            }
+            return number;
         }
     }
 }
