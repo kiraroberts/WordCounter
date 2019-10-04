@@ -44,5 +44,14 @@ namespace Counter.Tests
             string[] testArray = newWordCounter.InputtedSentenceArray;
             Assert.AreEqual("desert", testArray[5]);
         }
+        [TestMethod]
+        public void NumberOfWordUsed_CountInputtedWord_true()
+        {
+            WordCounter newWordCounter = new WordCounter("He lasted as long as a pint of whiskey in a five handed poker game.", "as");
+            string testWord = newWordCounter.InputtedWord;
+            string[] inputtedSentenceArray = newWordCounter.InputtedSentenceArray;
+            int testTotal = newWordCounter.NumberOfWordUsed(inputtedSentenceArray, testWord);
+            Assert.AreEqual(2, testTotal);
+        }
     }
 }

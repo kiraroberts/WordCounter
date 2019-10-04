@@ -15,8 +15,11 @@ namespace Counter.Models
             InputtedSentence = inputtedSentence.ToLower();
             InputtedSentenceArray = InputtedSentence.Split(' ', '.', '!', ',', '?');
             InputtedWord = inputtedWord.ToLower();
-            NumberOfTimesWordUsed = NumberOfTimesWordUsed;
-
+            NumberOfTimesWordUsed = NumberOfWordUsed(InputtedSentenceArray, InputtedWord);
+        }
+        public int NumberOfWordUsed(string[] inputtedSentenceArray, string inputtedWord)
+        {
+            return 0;
         }
     }
 }
